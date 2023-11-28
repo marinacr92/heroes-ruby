@@ -1,0 +1,22 @@
+<h1 class="title">Tour of Heroes</h1>
+
+<nav>
+    <ul>
+        <li>
+            <a href="/">Dashboard</a>
+        </li>
+        <li>
+            <a href="/heroes">Heroes</a>
+        </li>
+    </ul>
+</nav>
+<h2>Top Heroes</h2>
+<ul>
+    <% @dashboards.each do |dashboard| %>
+    <li>
+        <h3>
+        <p><%= link_to dashboard.name, hero_detail_path(id_hero: dashboard.id_hero) %></p>
+        </h3>
+    </li>
+    <% end %>
+</ul>
