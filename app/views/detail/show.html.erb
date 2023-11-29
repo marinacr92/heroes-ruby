@@ -3,19 +3,28 @@
 <nav>
     <ul class="nav_ul">
         <li>
-            <a class="nav_link" href="/">Dashboard</a>
+            <a class="btn btn-secondary btn-sm" href="/">Dashboard</a>
         </li>
         <li>
-            <a class="nav_link" href="/heroes">Heroes</a>
+            <a class="btn btn-secondary btn-sm" href="/heroes">Heroes</a>
         </li>
     </ul>
 </nav>
+<div>
+    <h3><%= @details.name.upcase %> Details </h3>
+    <span> Id:
+        <%= @details.id_hero %>
+    </span>
+    <%= form_for @details, url: { action: :update, id: @details.id_hero }, method: :patch do |f| %>
+    <%= f.label :name, "Nuevo nombre" %>
+    <%= f.text_field :name %>
+    <%= f.submit "Actualizar" %>
+  <% end %>
 
-<p class="button">
-    <%= @details.name %>
-</p>
+<script>
+    
+</script>
 
-<p>
-    <%= @details.id_hero %>
-</p>
+</div>
+
 

@@ -1,22 +1,24 @@
 <h1 class="title">Tour of Heroes</h1>
 
 <nav>
-    <ul>
+    <ul class="nav_ul">
         <li>
-            <a href="/">Dashboard</a>
+            <a class="btn btn-secondary btn-sm" href="/">Dashboard</a>
         </li>
         <li>
-            <a href="/heroes">Heroes</a>
+            <a class="btn btn-secondary btn-sm" href="/heroes">Heroes</a>
         </li>
     </ul>
 </nav>
-<h2>Top Heroes</h2>
-<ul>
-    <% @dashboards.each do |dashboard| %>
-    <li>
-        <h3>
-        <p><%= link_to dashboard.name, hero_detail_path(id_hero: dashboard.id_hero) %></p>
-        </h3>
-    </li>
-    <% end %>
-</ul>
+<div class="dashboard-div-style">
+    <h2>Top Heroes</h2>
+    <ul class="list-group list-group-horizontal dashboard-ul-style">
+        <% @dashboards.each do |dashboard| %>
+        <li class="li-style">
+            <!-- <p class="btn btn-primary btn-lg btn-style"> -->
+                <%= link_to dashboard.name, hero_detail_path(id_hero: dashboard.id_hero) %>
+            <!-- </p> -->
+        </li>
+        <% end %>
+    </ul>
+</div>

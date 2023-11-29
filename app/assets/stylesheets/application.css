@@ -15,17 +15,73 @@
  */
 
  .title {
-    color: rgb(42, 68, 146);
+    color: rgb(22, 102, 187);
     font-family: Arial, Helvetica, sans-serif;
  }
 
  .nav_ul {
-    
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
  }
 
  .nav_link {
-    background-color: rgb(207, 207, 207);
-    padding: 7px;
+   background-color:rgb(215, 215, 215);
+   padding: 7px;
     text-decoration: none;
-    color: grey;
+    color: rgb(0, 0, 0);
  }
+
+ .heroes-ul-style{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+ }
+
+ .heroes-li-style{
+  display: grid;
+  grid-template-columns: 10% 90%;
+  height: 45px;
+ }
+
+ .heroes-id-style{
+  background-color: rgb(39, 52, 86);
+  color: white;
+  margin: 0;
+  padding: 5px 0 0 10px;
+ }
+
+ .heroes-li-style a{
+  background-color: rgb(229, 229, 229) ;
+  text-decoration: none;
+  color: black;
+  padding: 5px 0 0 15px;
+ }
+
+ .dashboard-div-style{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+ }
+ .dashboard-ul-style{
+  gap: 20px;
+ }
+
+ .li-style {
+   list-style-type: none;
+ }
+ .btn-primary.btn-style{
+   background-color: rgb(39, 52, 86);
+ }
+
+ .li-style a{
+  padding: 15px;
+  text-decoration: none;
+  border-radius: 8px;
+  background-color: rgb(39, 52, 86);
+  color: white;
+}

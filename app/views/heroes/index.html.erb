@@ -1,21 +1,21 @@
 <h1 class="title">Tour of Heroes</h1>
 
 <nav>
-    <ul>
+    <ul class="nav_ul">
         <li>
-            <a href="/">Dashboard</a>
+            <a class="btn btn-secondary btn-sm" href="/">Dashboard</a>
         </li>
         <li>
-            <a href="/heroes">Heroes</a>
+            <a class="btn btn-secondary btn-sm" href="/heroes">Heroes</a>
         </li>
     </ul>
 </nav>
 <h2>My Heroes</h2>
-<ul>
+<ul class="heroes-ul-style">
     <% @heroes.each do |hero| %>
-    <li>
-        <p><%= hero.id_hero %></p>
-        <p><%= link_to hero.name, hero_detail_path(id_hero: hero.id_hero) %></p>
+    <li class="heroes-li-style">
+        <p class="heroes-id-style"><%= hero.id_hero %></p>
+        <%= link_to hero.name, hero_detail_path(id_hero: hero.id_hero) %>
     </li>
     <% end %>
 </ul>
