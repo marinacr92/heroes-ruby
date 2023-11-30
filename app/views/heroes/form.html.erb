@@ -1,0 +1,14 @@
+<%= form_with(model: @create, url: new_hero_create_path) do |f| %>
+    <div>
+        <%= f.label "Name:" %>
+        <%= f.text_field :name %>
+        <%= f.label "ID:" %>
+        <%= f.text_field :id_hero %>
+        <%= f.label "Other:" %>
+        <%= f.text_field :other %>
+    </div>
+    <div>
+    <%= f.submit "Create" %>
+    </div>
+<% end %>
+

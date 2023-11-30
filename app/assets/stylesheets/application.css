@@ -34,7 +34,7 @@
  }
 
  .heroes-ul-style{
-  width: 50%;
+  width: 80%;
   display: flex;
   flex-direction: column;
   gap: 15px;
@@ -43,22 +43,25 @@
 
  .heroes-li-style{
   display: grid;
-  grid-template-columns: 10% 90%;
+  align-items: center;
+  grid-template-columns: 50px 65% 15%;
   height: 45px;
  }
 
  .heroes-id-style{
   background-color: rgb(39, 52, 86);
   color: white;
-  margin: 0;
-  padding: 5px 0 0 10px;
+  padding: 5px;
+  border-radius: 5px 0 0 5px;
  }
 
  .heroes-li-style a{
   background-color: rgb(229, 229, 229) ;
   text-decoration: none;
   color: black;
-  padding: 5px 0 0 15px;
+  padding: 5px;
+  margin-right: 20px;
+  border-radius: 0 5px 5px 0
  }
 
  .dashboard-div-style{

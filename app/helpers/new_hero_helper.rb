@@ -1,0 +1,2 @@
+module NewHeroHelper
+end

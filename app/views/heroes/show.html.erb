@@ -1,0 +1,27 @@
+<h1 class="title">Tour of Heroes</h1>
+
+<nav>
+    <ul class="nav_ul">
+        <li>
+            <a class="btn btn-secondary btn-sm" href="/">Dashboard</a>
+        </li>
+        <li>
+            <a class="btn btn-secondary btn-sm" href="/heroes">Heroes</a>
+        </li>
+    </ul>
+</nav>
+<div>
+    <h3><%= @hero.name.upcase %> Details </h3>
+    <span> Id:
+        <%= @hero.id_hero %>
+    </span>
+    <%= form_for @hero, url: { action: :update, id: @hero.id_hero }, method: :patch do |f| %>
+        <%= f.label "Name:" %>
+        <%= f.text_field :name %>
+        <%= f.submit "Update" %>
+    <% end %>
+    <span> Other:
+        <%= @hero.other %>
+    </span>
+</div>
+

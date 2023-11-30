@@ -15,9 +15,7 @@
     <ul class="list-group list-group-horizontal dashboard-ul-style">
         <% @dashboards.each do |dashboard| %>
         <li class="li-style">
-            <!-- <p class="btn btn-primary btn-lg btn-style"> -->
-                <%= link_to dashboard.name, hero_detail_path(id_hero: dashboard.id_hero) %>
-            <!-- </p> -->
+            <%= link_to dashboard.name, hero_detail_path(id_hero: dashboard.id_hero) %>
         </li>
         <% end %>
     </ul>

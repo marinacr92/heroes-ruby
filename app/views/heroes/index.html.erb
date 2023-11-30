@@ -14,9 +14,15 @@
 <ul class="heroes-ul-style">
     <% @heroes.each do |hero| %>
     <li class="heroes-li-style">
-        <p class="heroes-id-style"><%= hero.id_hero %></p>
-        <%= link_to hero.name, hero_detail_path(id_hero: hero.id_hero) %>
+        <spam class="heroes-id-style"><%= hero.id_hero %></spam>
+        <%= link_to hero.name, hero_heroes_path(id_hero: hero.id_hero) %>
+        <%= form_with(url: hero_heroes_path(id_hero: hero.id_hero), method: :delete, local: true) do |f| %>
+            <%= f.submit "Delete", class: "btn btn-danger" %>
+        <% end %>
     </li>
     <% end %>
 </ul>
+
+<a class="btn btn-secondary btn-sm" href="/heroes/create">New hero</a>
+
 
