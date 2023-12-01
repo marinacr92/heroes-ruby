@@ -1,3 +1,9 @@
+<% if flash[:error] %>
+<div class="alert alert-danger">
+    <%= flash[:error] %>
+</div>
+<% end %>
+
 <%= form_with(model: @create, url: new_hero_create_path) do |f| %>
     <div>
         <%= f.label "Name:" %>
@@ -11,4 +17,6 @@
     <%= f.submit "Create" %>
     </div>
 <% end %>
+
+
 

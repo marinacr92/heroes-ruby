@@ -10,6 +10,14 @@
         </li>
     </ul>
 </nav>
+<% if flash[:success] %>
+<div class="alert alert-success">
+    <%= flash[:success] %>
+</div>
+<% end %>
+
+
+
 <h2>My Heroes</h2>
 <ul class="heroes-ul-style">
     <% @heroes.each do |hero| %>

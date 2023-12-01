@@ -15,7 +15,7 @@
     <span> Id:
         <%= @hero.id_hero %>
     </span>
-    <%= form_for @hero, url: { action: :update, id: @hero.id_hero }, method: :patch do |f| %>
+    <%= form_for @hero, url: { action: :update, id_hero: @hero.id_hero }, method: :patch do |f| %>
         <%= f.label "Name:" %>
         <%= f.text_field :name %>
         <%= f.submit "Update" %>
@@ -23,5 +23,7 @@
     <span> Other:
         <%= @hero.other %>
     </span>
+    
+    
 </div>
 
