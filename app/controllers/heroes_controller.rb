@@ -1,5 +1,5 @@
 class HeroesController < ApplicationController
-  before_action :find_hero, only: [:show, :update]
+  before_action :find_hero, only: [:show, :update, :destroy]
   def index
     @heroes = Hero.all
   end
@@ -16,7 +16,7 @@ class HeroesController < ApplicationController
     @delete.destroy
     
     respond_to do |format|
-      format.html { redirect_to hero_heroes_url, notice: 'Heroe eliminado exitosamente.'}
+      format.html { redirect_to hero_heroes_path, notice: 'Heroe eliminado exitosamente.'}
       format.json { head :no_content }    
     end
   end
