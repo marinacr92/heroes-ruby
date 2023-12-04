@@ -4,19 +4,27 @@
 </div>
 <% end %>
 
-<%= form_with(model: @create, url: new_hero_create_path) do |f| %>
-    <div>
-        <%= f.label "Name:" %>
-        <%= f.text_field :name %>
-        <%= f.label "ID:" %>
-        <%= f.text_field :id_hero %>
-        <%= f.label "Other:" %>
-        <%= f.text_field :other %>
-    </div>
-    <div>
-    <%= f.submit "Create" %>
-    </div>
-<% end %>
+<div class= "form-create">
+    <%= form_with(model: @create, url: new_hero_create_path) do |f| %>
+        <div class="input-group input-group-md div-form">
+            <div class="form-group">
+                <%= f.label "Name:", class:"input-group-text input-label" %>
+                <%= f.text_field :name, class: "form-control form-input"%>
+            </div>
+            <div class="form-group">
+                <%= f.label "ID:", class:"input-group-text input-label" %>
+                <%= f.text_field :id_hero, class: "form-control form-input" %>
+            </div>
+            <div class="form-group">
+                <%= f.label "Other:", class:"input-group-text input-label" %>
+                <%= f.text_field :other, class: "form-control form-input" %>
+            </div>
+        </div>
+        <div>
+        <%= f.submit "Create", class: "btn btn-outline-secondary btn-create" %>
+        </div>
+    <% end %>
+</div>
 
 
 
