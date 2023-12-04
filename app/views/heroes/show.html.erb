@@ -10,14 +10,22 @@
         </li>
     </ul>
 </nav>
+
+<% if flash[:error] %>
+<div class="alert alert-danger">
+    <%= flash[:error] %>
+</div>
+<% end %>
+
+
 <div>
     <h3><%= @hero.name.upcase %> Details </h3>
     <span> Id:
         <%= @hero.id_hero %>
     </span>
-    <%= form_for @hero, url: { action: :update, id_hero: @hero.id_hero }, method: :patch do |f| %>
+    <%= form_with(url: update_hero_path(@hero.id_hero), method: :patch, local: true) do |f| %>
         <%= f.label "Name:" %>
-        <%= f.text_field :name %>
+        <%= f.text_field :name, placeholder: @hero.name%>
         <%= f.submit "Update" %>
     <% end %>
     <span> Other:
